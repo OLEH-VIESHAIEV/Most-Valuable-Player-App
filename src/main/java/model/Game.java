@@ -1,14 +1,18 @@
 package model;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Game {
     private GameName gameName;
-    private Player player;
+    private List<String> players;
 
-    public Game(GameName gameName, Player player) {
+    public Game() {
+    }
+
+    public Game(GameName gameName, List<String> players) {
         this.gameName = gameName;
-        this.player = player;
+        this.players = players;
     }
 
     public GameName getGameName() {
@@ -19,12 +23,12 @@ public class Game {
         this.gameName = gameName;
     }
 
-    public Player getPlayer() {
-        return player;
+    public List<String> getPlayers() {
+        return players;
     }
 
-    public void setPlayer(Player player) {
-        this.player = player;
+    public void setPlayers(List<String> players) {
+        this.players = players;
     }
 
     public enum GameName {
@@ -56,7 +60,7 @@ public class Game {
     public String toString() {
         return "Game{"
                 + "gameName=" + gameName
-                + ", player=" + player
+                + ", players=" + players
                 + '}';
     }
 }

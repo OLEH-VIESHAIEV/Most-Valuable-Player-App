@@ -7,15 +7,13 @@ public class Player {
     private String nickName;
     private Integer number;
     private String team;
-    private Integer ratingPoints;
 
     public Player(String name, String nickName, Integer number,
-                  String team, Integer ratingPoints) {
+                  String team) {
         this.name = name;
         this.nickName = nickName;
         this.number = number;
         this.team = team;
-        this.ratingPoints = ratingPoints;
     }
 
     public String getName() {
@@ -50,14 +48,6 @@ public class Player {
         this.team = team;
     }
 
-    public Integer getRatingPoints() {
-        return ratingPoints;
-    }
-
-    public void setRatingPoints(Integer ratingPoints) {
-        this.ratingPoints = ratingPoints;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -70,13 +60,12 @@ public class Player {
         return Objects.equals(name, player.name)
                 && Objects.equals(nickName, player.nickName)
                 && Objects.equals(number, player.number)
-                && Objects.equals(team, player.team)
-                && Objects.equals(ratingPoints, player.ratingPoints);
+                && Objects.equals(team, player.team);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, nickName, number, team, ratingPoints);
+        return Objects.hash(name, nickName, number, team);
     }
 
     @Override
@@ -86,7 +75,6 @@ public class Player {
                 + ", nickName='" + nickName + '\''
                 + ", number=" + number
                 + ", team='" + team + '\''
-                + ", ratingPoints=" + ratingPoints
                 + '}';
     }
 }
