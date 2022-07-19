@@ -1,7 +1,7 @@
 BASKETBALL
-player 1;nick1;4;Team A;10;2;7
-player 2;nick2;8;Team A;0;10;0
-player 3;nick3;15;Team A;15;10;4
-player 4;nick4;16;Team B;20;0;0
-player 5;nick5;23;Team B;4;7;7
-player 6;nick6;42;Team B;8;10;0
+player1;nick1;4;TeamA;10;2;7
+player2;nick2;8;TeamA;0;10;0
+player3;nick3;15;TeamA;15;10;4
+player4;nick4;16;TeamB;20;0;0
+player5;nick5;23;TeamB;4;7;7
+player6;nick6;42;TeamB;8;10;0
