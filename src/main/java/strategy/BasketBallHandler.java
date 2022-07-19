@@ -5,6 +5,7 @@ import java.util.List;
 import model.Game;
 import model.Player;
 import model.Team;
+import validator.BasketballFormatValidator;
 
 public class BasketBallHandler implements GameHandler {
     private static final int NAME_INDEX = 0;
@@ -18,6 +19,7 @@ public class BasketBallHandler implements GameHandler {
     @Override
     public void process(Game game) {
         List<String> players = game.getPlayers();
+        BasketballFormatValidator.validate(players);
         Team teamWinner = findWinnerTeam(players);
         for (int i = 0; i < players.size(); i++) {
             String line = players.get(i);

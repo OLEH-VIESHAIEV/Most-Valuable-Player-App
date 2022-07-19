@@ -5,6 +5,7 @@ import java.util.List;
 import model.Game;
 import model.Player;
 import model.Team;
+import validator.HandballFormatValidator;
 
 public class HandBallHandler implements GameHandler {
     private static final int NAME_INDEX = 0;
@@ -17,6 +18,7 @@ public class HandBallHandler implements GameHandler {
     @Override
     public void process(Game game) {
         List<String> players = game.getPlayers();
+        HandballFormatValidator.validate(players);
         Team teamWinner = findWinnerTeam(players);
         for (int i = 1; i < players.size(); i++) {
             String line = players.get(i);
